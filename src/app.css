@@ -1,0 +1,139 @@
+/*
+  WebAudio Hub design tokens.
+  Brushed-aluminium greys, one signal orange, one typeface (Archivo) used at
+  different widths. Panels meet at 1px seams like a hardware faceplate.
+*/
+:root {
+  --base: #dcdcd7;
+  --panel: #f2f2ee;
+  --panel-sunk: #e6e6e1;
+  --display: #1f2023;
+  --ink: #16171a;
+  --slate: #5a5c60;
+  --seam: #c3c3bd;
+  --signal: #ff5a00;
+  /* Orange for small text; --signal itself is too light on light panels. */
+  --signal-text: #c24400;
+  --signal-ink: #16171a;
+  --led-off: #a9aaa6;
+  --led-down: #8a8b88;
+  --focus: #1f5fff;
+
+  --radius-key: 3px;
+  --radius-panel: 6px;
+  --gutter: 16px;
+  --max: 1240px;
+
+  --font: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-4: clamp(2.25rem, 6vw, 4.5rem);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --base: #1c1d1f;
+    --panel: #26272a;
+    --panel-sunk: #202123;
+    --display: #111214;
+    --ink: #e9e9e4;
+    --slate: #9b9da0;
+    --seam: #36373b;
+    --signal: #ff6a1a;
+    --signal-text: #ff6a1a;
+    --led-off: #4a4b4f;
+    --led-down: #5c5d60;
+    --focus: #7aa2ff;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --base: #1c1d1f;
+  --panel: #26272a;
+  --panel-sunk: #202123;
+  --display: #111214;
+  --ink: #e9e9e4;
+  --slate: #9b9da0;
+  --seam: #36373b;
+  --signal: #ff6a1a;
+  --signal-text: #ff6a1a;
+  --led-off: #4a4b4f;
+  --led-down: #5c5d60;
+  --focus: #7aa2ff;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.5;
+  font-variation-settings: 'wdth' 100;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

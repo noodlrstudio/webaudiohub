@@ -1,0 +1,27 @@
+{
+  "name": "webaudiohub",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "build:with-previews": "npm run generate:previews && vite build",
+    "preview": "vite preview",
+    "generate:previews": "tsx scripts/generate-site-previews.ts",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:data": "prettier --check src/lib/data.ts",
+    "format:data": "prettier --write src/lib/data.ts"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.1.0",
+    "@types/node": "^22.14.0",
+    "playwright": "^1.55.0",
+    "prettier": "^3.6.0",
+    "svelte": "^5.38.0",
+    "svelte-check": "^4.3.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
