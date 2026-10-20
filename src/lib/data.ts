@@ -28,7 +28,7 @@ export const sites: Site[] = [
     tags: ['ambient', 'composition', 'drone'],
     description:
       'AAG is a browser-based ambient soundscape and atmospheric audio generator by Peter Simcoe.',
-  },  
+  },
   {
     id: 'acid-machine',
     name: 'Acid Machine',
