@@ -21,6 +21,15 @@ export const sites: Site[] = [
       'Drum machine with swappable kits, saved patterns and audio recording.',
   },
   {
+    id: 'aag',
+    name: 'Atmospheric Audio Generator',
+    url: 'https://aag.simcoe.co.uk',
+    category: 'synth',
+    tags: ['ambient', 'composition', 'drone'],
+    description:
+      'AAG is a browser-based ambient soundscape and atmospheric audio generator by Peter Simcoe.',
+  },  
+  {
     id: 'acid-machine',
     name: 'Acid Machine',
     url: 'https://errozero.co.uk/acid-machine/',
