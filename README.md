@@ -52,7 +52,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guidelines.
 npm install
 npm run dev               # http://localhost:3000
 npm run check             # type-check
-npm run generate:previews # optional: screenshots of each app (needs `npx playwright install chromium`)
+npm run generate:previews # optional: share images (og:image) per app, screenshot fallback (needs `npx playwright install chromium`)
 npm run build
 ```
 
