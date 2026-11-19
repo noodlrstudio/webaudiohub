@@ -189,4 +189,13 @@ export const sites: Site[] = [
     description:
       'Conduct four singing blobs. Machine learning fills in the harmony.',
   },
+  {
+    id: 'browsertones',
+    name: 'BrowserTones',
+    url: 'https://browsertones.com/',
+    category: 'playful',
+    tags: ['guitar', 'effects', 'live-input'],
+    description:
+      'Try guitar amps and effects on a built-in guitar part, or plug in a guitar through an audio interface and play.',
+  },
 ];
